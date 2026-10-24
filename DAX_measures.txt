@@ -1,0 +1,14 @@
+Suggested DAX measures
+(Create each separately via Modeling > New measure)
+
+Total Revenue = SUM('sales_dashboard_dataset'[Revenue])
+
+Total Orders = DISTINCTCOUNT('sales_dashboard_dataset'[Order_ID])
+
+Units Sold = SUM('sales_dashboard_dataset'[Quantity])
+
+Average Order Value = DIVIDE([Total Revenue], [Total Orders], 0)
+
+Average Unit Price = AVERAGE('sales_dashboard_dataset'[Unit_Price])
+
+Note: Power BI may rename the imported table. If it does, replace 'sales_dashboard_dataset' with the exact table name shown in the Fields pane.
